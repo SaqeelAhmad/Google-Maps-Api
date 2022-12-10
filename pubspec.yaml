@@ -53,6 +53,8 @@ dependencies:
 
   custom_info_window: ^1.0.1
 
+  cached_network_image: any
+
 
 dev_dependencies:
   flutter_test:

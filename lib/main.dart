@@ -7,6 +7,7 @@ import 'Custom_Marker_Screen.dart';
 import 'Custom_Merker_Info_Window.dart';
 import 'Get_User_Currnt_Location_Screen.dart';
 import 'Home_Page.dart';
+import 'Network_Image_Marker.dart';
 
 
 void main() {
@@ -26,12 +27,13 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: //PolylineSceen(),
+      home: NetworkImageMarker(),
+      //PolylineSceen(),
       // PloygoneScreen(),
       //CustomMerkerInfoWindow(),
       //CustomMarkerScreen(),
       //GooglePlacesApiScreen(),
-      GetUserCurrntLocationScreen(),
+      //GetUserCurrntLocationScreen(),
         //MyHomePage2(),
        //MyHomePage(),
     );
