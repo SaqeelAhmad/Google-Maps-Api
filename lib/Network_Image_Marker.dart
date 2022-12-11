@@ -99,19 +99,23 @@ final Uint8List resizedImageMarker = byteData!.buffer.asUint8List();
     return Scaffold(
       appBar: AppBar(title: Text("Network Images Marker"),),
 body:
-      // body: CircleAvatar(
-      //   child: CachedNetworkImage(
-      //     imageUrl: "http://via.placeholder.com/350x150",
-      //     placeholder: (context, url) => CircularProgressIndicator(),
-      //     errorWidget: (context, url, error) => Icon(Icons.error),
-      //   ),
 
-    GoogleMap(initialCameraPosition: _kGooglePlex,
-      myLocationEnabled: true,
-        myLocationButtonEnabled: true,
-        mapType: MapType.normal,
-        markers: Set<Marker>.of(_marker),
-      ),
+
+    Stack(
+      children: [
+        GoogleMap(initialCameraPosition: _kGooglePlex,
+          myLocationEnabled: true,
+            myLocationButtonEnabled: true,
+            mapType: MapType.normal,
+            markers: Set<Marker>.of(_marker),
+          ),
+        CircleAvatar(child: CachedNetworkImage(
+          imageUrl: "http://via.placeholder.com/350x150",
+          placeholder: (context, url) => CircularProgressIndicator(),
+          errorWidget: (context, url, error) => Icon(Icons.error),
+        ),)
+      ],
+    ),
 
     );
   }

@@ -81,7 +81,9 @@ Uint8List? markerImage;
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(
+    return Scaffold(
+      appBar: AppBar(title: Text("Add Custom Marker"),),
+      body: SafeArea(
       child: GoogleMap(
         // change maps type
         mapType: MapType.normal,

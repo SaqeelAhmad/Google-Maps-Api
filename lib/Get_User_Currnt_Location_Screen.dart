@@ -86,6 +86,7 @@ class _GetUserCurrntLocationScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: SafeArea(
         child: Stack(
           children: [
